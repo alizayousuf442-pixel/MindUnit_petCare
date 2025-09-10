@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::prefix('/')->group(function() {
+
+Route::get('/', fn() => view('user.index'));
+Route::get('/about', fn() => view('user.about'));
+Route::get('/vet', fn() => view('user.vet'));
+Route::get('/services', fn() => view('user.services'));
+Route::get('/gallery', fn() => view('user.gallery'));
+Route::get('/shop', fn() => view('user.shop'));
+Route::get('/blog', fn() => view('user.blog'));
+Route::get('/contact', fn() => view('user.contact'));
+
+
+
 });
+
