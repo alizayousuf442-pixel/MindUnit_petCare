@@ -25,6 +25,8 @@ Route::get('/gallery', fn() => view('user.gallery'));
 Route::get('/shop', fn() => view('user.shop'));
 Route::get('/blog', fn() => view('user.blog'));
 Route::get('/contact', fn() => view('user.contact'));
+Route::get('/adopt', fn() => view('user.adopt'));
+
 
 
 
