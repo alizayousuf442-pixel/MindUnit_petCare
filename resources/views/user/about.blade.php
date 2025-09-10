@@ -7,16 +7,47 @@
 </style>
 
 <!-- Hero Section -->
-<section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('images/about-2.jpg') }}'); height:70vh; position:relative;">
-    <div class="overlay" style="background: var(--main-gradient); opacity:0.6; position:absolute; width:100%; height:100%; top:0; left:0;"></div>
+<section class="hero-wrap hero-wrap-2" 
+         style="background-image: url('{{ asset('images/about-2.jpg') }}'); 
+                height:70vh; 
+                position:relative; 
+                background-size: cover; 
+                background-position: center;">
+    <!-- Overlay -->
+    <div class="overlay" 
+         style="background: var(--main-gradient); 
+                opacity:0.6; 
+                position:absolute; 
+                width:100%; 
+                height:100%; 
+                top:0; 
+                left:0;">
+    </div>
+
+    <!-- Container for content -->
     <div class="container h-100 d-flex justify-content-center align-items-center">
-        <div class="text-center text-white"  style="position: relative; z-index: 2;">
-            <h1 class="display-4 animate__animated animate__fadeInDown postion-absolute">Compassionate Care for Your Pets</h1>
-            <p class="lead animate__animated animate__fadeInUp mb-4 postion-absolute text-white">Trusted by pet owners for over 10 years</p>
-            <a href="{{ url('/book-pet') }}" class="btn btn-warning btn-lg animate__animated animate__fadeInUp animate__delay-1s">Book Now</a>
+        <div class="text-center text-white" style="position: relative; z-index: 2;">
+
+            <h1 class="display-4 animate__animated animate__fadeInDown fw-bold mb-3"
+                style="font-size: calc(1.5rem + 2vw);">
+                Compassionate Care for Your Pets
+            </h1>
+
+            <p class="lead animate__animated animate__fadeInUp mb-4" 
+               style="font-size: calc(0.9rem + 0.5vw);">
+               Trusted by pet owners for over 10 years
+            </p>
+
+            <a href="{{ url('/book-pet') }}" 
+               class="btn btn-warning btn-lg animate__animated animate__fadeInUp animate__delay-1s"
+               style="padding: 0.75rem 2rem; font-size: 1rem;">
+               Book Now
+            </a>
         </div>
     </div>
 </section>
+
+
 
 
 

@@ -3,11 +3,17 @@
 
 <!-- Hero Section -->
 <section class="py-5 text-white" style="background: var(--main-gradient);">
-    <div class="container text-center">
-        <h1 class="display-4 mb-3">Compassionate Care for Your Pets</h1>
-        <p class="lead mb-4">Trusted by pet owners for over 10 years</p>
-        <a href="#appointment" class="btn btn-warning btn-lg">Book Appointment</a>
-    </div>
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3" style="font-size: calc(1.5rem + 2vw);">
+      Compassionate Care for Your Pets
+    </h1>
+    <p class="lead mb-4" style="font-size: calc(1rem + 0.5vw);">
+      Trusted by pet owners for over 10 years
+    </p>
+    <a href="#appointment" class="btn btn-warning btn-lg px-4 py-2" style="font-size: 1rem;">
+      Book Appointment
+    </a>
+  </div>
 </section>
 
 <!-- Doctors Section -->

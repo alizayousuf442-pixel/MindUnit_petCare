@@ -1,14 +1,27 @@
 @extends('user.master')
 @section('content')
-
 <!-- Contact Hero Section with Gradient Background -->
-<section class="py-5 text-white" style="background: var(--main-gradient); background-size: cover; background-attachment: fixed;">
-    <div class="container text-center">
-        <h1 class="display-4 mb-3">Get in Touch with Us</h1>
-        <p class="lead mb-4">We’re here to answer your questions and help your pets</p>
-        <a href="#contactForm" class="btn btn-warning btn-lg">Send Message</a>
-    </div>
+<section class="d-flex align-items-center py-5" 
+         style="background: var(--main-gradient); background-size: cover; background-attachment: fixed;">
+  <div class="container text-center px-3">
+    <!-- Responsive Heading -->
+    <h1 class="fw-bold mb-3" style="font-size: clamp(1.8rem, 5vw, 3.5rem);">
+      Get in Touch with Us
+    </h1>
+
+    <!-- Responsive Paragraph -->
+    <p class="mb-4" style="font-size: clamp(1rem, 2.5vw, 1.5rem);">
+      We’re here to answer your questions and help your pets
+    </p>
+
+    <!-- Button -->
+    <a href="#contactForm" class="btn btn-warning btn-lg px-4 py-2">
+      Send Message
+    </a>
+  </div>
 </section>
+
+
 
 
 <section class="ftco-section">

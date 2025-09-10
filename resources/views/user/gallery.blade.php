@@ -2,17 +2,40 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg'); height:60vh; position:relative;">
-  <div class="overlay" style="background: var(--main-gradient); opacity:0.6; position:absolute; width:100%; height:100%; top:0; left:0; z-index:1;"></div>
-  <div class="container h-100 d-flex justify-content-center align-items-center" style="position: relative; z-index:2;">
+<section class="hero-wrap hero-wrap-2" 
+         style="background-image: url('images/bg_2.jpg'); min-height:60vh; position:relative; background-size:cover; background-position:center;">
+  
+  <div class="overlay" 
+       style="background: var(--main-gradient); opacity:0.6; position:absolute; width:100%; height:100%; top:0; left:0; z-index:1;"></div>
+  
+  <div class="container h-100 d-flex justify-content-center align-items-center" 
+       style="position: relative; z-index:2;">
+    
     <div class="text-center text-white">
-      <h1 class="display-4 animate__animated animate__fadeInDown">Gallery</h1>
-      <p class="lead animate__animated animate__fadeInUp">See our adorable pets and happy moments</p>
-      <div class="mt-3 animate__animated animate__fadeInUp">
-        <a href="{{ url('/contact') }}" class="btn px-4 py-2 mr-2" style="background-color: var(--main-brown); color:white; border-radius: 50px;">Contact Us</a>
-        <a href="{{ url('/shop') }}" class="btn px-4 py-2" style="background-color: var(--main-gold); color: var(--main-brown); border-radius: 50px;">Buy Pet Food</a>
-      </div>
+      <h1 class="display-4 animate__animated animate__fadeInDown" 
+          style="font-size: calc(1.5rem + 2vw);">
+        Gallery
+      </h1>
+      <p class="lead animate__animated animate__fadeInUp" 
+         style="font-size: calc(1rem + 0.5vw);">
+        See our adorable pets and happy moments
+      </p>
+      
+      <div class="mt-3 d-flex flex-column flex-sm-row justify-content-center animate__animated animate__fadeInUp gap-3">
+    <a href="{{ url('/contact') }}" 
+       class="btn px-4 py-2 mb-2 mb-sm-0" 
+       style="background-color: var(--main-brown); color:white; border-radius: 50px;">
+      Contact Us
+    </a>
+    <a href="{{ url('/shop') }}" 
+       class="btn px-4 py-2" 
+       style="background-color: var(--main-gold); color: var(--main-brown); border-radius: 50px;">
+      Buy Pet Food
+    </a>
+</div>
+
     </div>
+    
   </div>
 </section>
 

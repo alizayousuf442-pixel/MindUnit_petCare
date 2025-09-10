@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Pet Sitting & Veterinary Services - Your Pet Care Partner</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
+  <!-- Font Awesome 5 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dN2tzbVVcyl+U1Nk2sI9R+M1uYvR8lX3v3XkR5V3Yl7+SmTjUj8n5n7hQ8n3kmLrH+H1l3d3k6tE0Ff1sFg6GA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,60 +20,86 @@
     <link rel="stylesheet" href="{{ asset('css/jquery.timepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- CSS: Add in your stylesheet or inside <style> -->
+
+
   </head>
   <body>
 
   
-    <div class="wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-center">
-            <p class="mb-0 phone pl-md-2">
-              <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
-              <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
-            </p>
-          </div>
-          <div class="col-md-6 d-flex justify-content-md-end">
-            <div class="social-media">
-              <p class="mb-0 d-flex">
-                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"></span></a>
-              </p>
-            </div>
-          </div>
+  <div class="wrap py-2" style="background-color:#f8f9fa;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left: Phone & Email -->
+      <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+        <p class="mb-0">
+          <a href="tel:+001234567" class="mr-3 text-white">
+            <span class="fa fa-phone mr-1"></span> +00 1234 567
+          </a> 
+          <a href="mailto:youremail@email.com" class="text-white">
+            <span class="fa fa-paper-plane mr-1"></span> youremail@email.com
+          </a>
+        </p>
+      </div>
+
+      <!-- Right: Social Media -->
+      <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+        <div class="social-media">
+          <a href="#" class="text-white mr-2"><span class="fa fa-facebook"></span></a>
+          <a href="#" class="text-white mr-2"><span class="fa fa-twitter"></span></a>
+          <a href="#" class="text-white mr-2"><span class="fa fa-instagram"></span></a>
+          <a href="#" class="text-white"><span class="fa fa-dribbble"></span></a>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    {{-- 🔹 Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}"><span class="flaticon-pawprint-1 mr-2"></span>Pet Sitting</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="{{ url('/vet') }}" class="nav-link">Veterinarian</a></li>
-            <li class="nav-item"><a href="{{ url('/services') }}" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="{{ url('/gallery') }}" class="nav-link">Gallery</a></li>
-            <li class="nav-item"><a href="{{ url('/pricing') }}" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="{{ url('/blog') }}" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
-          </ul>
-          <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
-            <a href="{{ url('/login') }}" class="btn btn-warning mr-2">Login</a>
-            <a href="{{ url('/register') }}" class="btn btn-warning">Registration</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-dark">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="{{ url('/') }}">
+      <span class="flaticon-pawprint-1 mr-2"></span>Pet Sitting
+    </a>
 
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links + buttons -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="{{ url('/vet') }}" class="nav-link">Veterinarian</a></li>
+        <li class="nav-item"><a href="{{ url('/services') }}" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="{{ url('/gallery') }}" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="{{ url('/shop') }}" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="{{ url('/blog') }}" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
+        <!-- Buttons inside collapse for small screens -->
+        <li class="nav-item mt-2 mt-lg-0 ml-lg-3">
+          <a href="{{ url('/login') }}" class="btn btn-warning btn-block btn-sm">Login</a>
+        </li>
+        <li class="nav-item mt-2 mt-lg-0 ml-lg-2">
+          <a href="{{ url('/regis') }}" class="btn btn-warning btn-block btn-sm">Registration</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+    
   
     <main>
       @yield('content')
