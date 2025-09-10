@@ -5,27 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #dba171;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  
   --main-gold: #D4AF37;
   --main-orange: #FF8C00;
   --main-brown: #8B4513;
@@ -2173,11 +2153,16 @@ fieldset:disabled a.btn {
     .show > .btn-info.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
       box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5); }
-
+.btn-warnings {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+width: 100px; }
 .btn-warning {
   color: #212529;
   background-color: #ffc107;
-  border-color: #ffc107; }
+  border-color: #ffc107;
+ }
   .btn-warning:hover {
     color: #212529;
     background-color: #e0a800;
@@ -8052,7 +8037,10 @@ h1, h2, h3, h4, h5,
     height: 40px;
     margin-right: 1px; }
     .social-media p a span {
-      color: #fff; }
+      color: white; 
+      background-color: #000;
+    
+  }
     .social-media p a:hover {
 background: #D4AF37; 
       border-color: #00bd56; }
@@ -8488,7 +8476,9 @@ background: radial-gradient(
   border-radius: 50%; }
   .icon-video span {
     font-size: 20px;
-    color: #00bd56; }
+    color: var(--main-brown
+    
+    ); }
 
 .ftco-intro .services {
   padding: 30px;
@@ -8721,7 +8711,7 @@ background: radial-gradient(
       color: #000000;
       margin-bottom: 5px; }
     .staff .text .position {
-      color: #00bd56;
+      color: var(--main-brown);
       display: block;
       font-weight: 600;
       display: inline-block;
@@ -8750,7 +8740,7 @@ background: radial-gradient(
         color: #fff;
         width: 30px;
         height: 30px;
-        background: #00bd56;
+        background: var(--main-brown);
         background: #207dff;
         background: -moz-linear-gradient(45deg, #207dff 0%, #00bd55 100%);
         background: -webkit-gradient(left bottom, right top, color-stop(0%, #207dff), color-stop(100%, #00bd55));
@@ -8773,12 +8763,12 @@ background: radial-gradient(
     .staff:hover .img, .staff:focus .img {
       margin-top: -10px; }
     .staff:hover .text, .staff:focus .text {
-      background: #00bd56;
+      background: var(--main-brown);
       color: rgba(255, 255, 255, 0.8); }
       .staff:hover .text h3, .staff:focus .text h3 {
         color: #fff; }
       .staff:hover .text .position, .staff:focus .text .position {
-        color: rgba(255, 255, 255, 0.4); }
+     background: var(--main-brown);}
 
 .ftco-social {
   padding: 0; }
@@ -9300,7 +9290,7 @@ background: #ffffff; /* white background */
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #00bd56; }
+    background: var(--main-brown); }
     .testimony-wrap .icon span {
       color: #fff; }
   .testimony-wrap .user-img {
@@ -9318,7 +9308,7 @@ background: #ffffff; /* white background */
     color: #000000; }
   .testimony-wrap .position {
     font-size: 14px;
-    color: #333333; }
+    color: var(--main-brown); }
 
 .ftco-faqs .img {
   height: 450px;
