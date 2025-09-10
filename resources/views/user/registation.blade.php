@@ -1,64 +1,68 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Rubik+Glitch&family=Story+Script&display=swap" rel="stylesheet">
 
-    <title>Registration Page</title>
+
+    <link rel="stylesheet" href="{{asset('css/login.css')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Rubik+Glitch&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+    <title>Log In Page</title>
 
     <style>
-      html, body {
+    
+      html,
+      body {
         height: 100%;
+        margin: 0;
       }
 
       .foam {
-        background-color: #fff8f0; /* optional background */
-        padding: 2rem;
-      }
-
-      .form-controls {
-        width: 100%;
-        padding: 0.5rem 1rem;
-        border: 1px solid #ccc;
-        border-radius: 0.25rem;
+        min-height: 100vh;
+        padding: 2rem 1rem;
       }
 
       .box {
-        max-width: 450px;
         width: 100%;
-        padding: 2rem;
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        max-width: 400px;
+        margin: auto;
       }
 
-      .btn-warning {
-        width: 100%;
-        padding: 0.75rem;
-      }
-
-      .register-text {
-        margin-top: 1rem;
-      }
 
       @media (max-width: 992px) {
-        .col-lg-6.d-none.d-lg-block {
-          display: none !important;
+        .col-lg-6.bg-img {
+          display: none;
         }
+      }
 
-        .foam {
-          min-height: auto;
-          padding: 3rem 1rem;
+     
+      @media (max-width: 576px) {
+        .foam h1 {
+          font-size: 1.8rem;
+
         }
       }
     </style>
@@ -67,59 +71,110 @@
 
     <div class="container-fluid h-100">
       <div class="row h-100">
+        <!-- Form Section -->
+        <div
+          class="col-lg-6 foam d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="box">
+            <h1 class="rubik-glitch-regular text-center mb-4">
+              Welcome to Registration
+            </h1>
 
-        <!-- Registration Form -->
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center foam">
-          <div class="box text-center">
-            <h1 class="rubik-glitch-regular mb-4">Welcome to Registration</h1>
-
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="/register" method="POST" enctype="multipart/form-data" class="w-100">
               @csrf
 
-              <div class="mb-3 text-start">
+              <div class="mb-3">
                 <label for="name" class="form-label rubik-glitch-regular">Name</label>
-                <input type="text" name="name" class="form-controls" id="name" placeholder="Enter your name" required>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
               </div>
+@error('name')
+<p class="alert alert-danger">{{$message}}</p>
+@enderror
 
-              <div class="mb-3 text-start">
-                <label for="image" class="form-label rubik-glitch-regular">Profile Image</label>
-                <input type="file" name="image" class="form-controls" id="image" accept="image/*">
-              </div>
-
-              <div class="mb-3 text-start">
+              <div class="mb-3">
                 <label for="email" class="form-label rubik-glitch-regular">Email</label>
-                <input type="email" name="email" class="form-controls" id="email" placeholder="Enter your email" required>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
               </div>
-
-              <div class="mb-3 text-start">
+@error('email')
+<p class="alert alert-danger">{{$message}}</p>
+@enderror
+              <div class="mb-3">
                 <label for="password" class="form-label rubik-glitch-regular">Password</label>
-                <input type="password" name="password" class="form-controls" id="password" placeholder="Enter your password" required>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+@error('password')
+<p class="alert alert-danger">{{$message}}</p>
+@enderror
+              <div class="mb-3">
+                <label
+                  for="password_confirmation"
+                  class="form-label rubik-glitch-regular"
+                >
+                  Confirm Password
+                </label>
+                <input
+                  type="password"
+                  name="password_confirmation"
+                  class="form-control"
+                  id="password_confirmation"
+                  placeholder="Confirm your password"
+                />
+              </div>
+@error('password_confirmation')
+<p class="alert alert-danger">{{$message}}</p>
+@enderror
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning">Register</button>
+              </div>
+          <div class="d-flex justify-content-center mt-3">
+  <a href="/" class="btn btn-google d-flex align-items-center justify-content-center gap-2 w-100">
+    <i class="fab fa-google"></i> Continue with Google
+  </a>
+</div>
+              <div class="text-center mt-3">
+                <p class="register-text">
+                  Already have an account? <a href="{{ route('login') }}">Login</a>
+                </p>
               </div>
 
-              <div class="mb-3 text-start">
-                <label for="password_confirmation" class="form-label rubik-glitch-regular">Confirm Password</label>
-                <input type="password" name="password_confirmation" class="form-controls" id="password_confirmation" placeholder="Confirm your password" required>
-              </div>
-
-              <button type="submit" class="btn btn-warning mb-3">Register</button>
-
-              <p class="register-text">Already have an account? <a href="{{ route('login') }}">Login</a></p>
             </form>
           </div>
         </div>
 
-        <!-- Left Image (hidden on small screens) -->
-        <div class="col-lg-6 d-none d-lg-block" 
-             style="background-image:url('images/beautiful-autumn-lifestyle.jpg'); 
-                    background-size:cover; 
-                    background-position:center;">
-        </div>
+
+        <!-- Image Section -->
+        <div
+          class="col-lg-6 bg-img d-none d-lg-block"
+          style="
+            background-image: url('images/beautiful-autumn-lifestyle.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+
       </div>
     </div>
 
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-            crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
   </body>
 </html>

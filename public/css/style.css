@@ -4,6 +4,119 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ html, body {
+  overflow-x: hidden;
+}
+
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fff8e7 0%, #ffe6a7 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     
+        padding: 3rem 1rem;
+        color: #333;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      h1::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #ffc107;
+        border-radius: 2px;
+        margin: 10px auto 0 auto;
+      }
+
+      .roles-container {
+         display: grid;
+  grid-template-columns: repeat(3, 280px);
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 960px;
+  margin-top: 3rem;
+}
+
+      .role-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 12px 30px rgba(255, 193, 7, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        cursor: pointer;
+      }
+      .role-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(255, 193, 7, 0.6);
+      }
+
+      .role-icon {
+        font-size: 4.5rem;
+        color: #ffc107;
+        margin-bottom: 1rem;
+      }
+
+      .role-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+        color: #444;
+      }
+
+      .role-description {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #666;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+      }
+
+      .btn-role {
+        background: #ffc107;
+        border: none;
+        padding: 0.6rem 1.6rem;
+        font-weight: 700;
+        border-radius: 30px;
+        color: #222;
+        transition: background 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+      }
+      .btn-role:hover {
+        background: #ffca28;
+        box-shadow: 0 12px 28px rgba(255, 193, 7, 0.6);
+        color: #111;
+      }
+
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 900px) {
+  .roles-container {
+    grid-template-columns: 1fr; 
+    max-width: 100%;
+  }
+}
+
 :root {
   
   --main-gold: #D4AF37;

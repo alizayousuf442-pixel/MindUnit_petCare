@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,10 +31,18 @@ Route::prefix('/')->group(function () {
    
     Route::get('/login', fn() => view('user.login'))->name('login');
     Route::get('/regis', fn() => view('user.registation'))->name('regis');
+    Route::get('/role', fn() => view('user.role'))->name('role');
 
   
     Route::get('/veterinarians', fn() => view('Veterinarians.vaccine.dashboard'))
          ->name('veterinarians.dashboard');
+
+         Route::post('/register',[AuthController::class,'register']);
+         Route::post('/loginUser',[AuthController::class,'loginUser']);
+         Route::get('/petowner',[AuthController::class,'petowner']);
+         Route::get('/animalshelter',[AuthController::class,'animalshelter']);
+         Route::get('/veterinarian',[AuthController::class,'veterinarian']);
+         Route::get('/logout',[AuthController::class,'logout']);
 });
 
 
